@@ -76,8 +76,13 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">TREZOR APIs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api-connect.html">TREZOR Connect API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-protobuf.html">Low level API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-connect">TREZOR Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-js">trezor.js</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-chrome-extension">TREZOR Chrome extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezord-trezor-bridge">trezord (TREZOR Bridge)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-android">trezor-android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-trezor">python-trezor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#low-level-hid-api">Low-level HID API</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cryptography.html">Cryptography</a><ul>
@@ -137,13 +142,19 @@
             
   <div class="section" id="trezor-apis">
 <h1>TREZOR APIs<a class="headerlink" href="#trezor-apis" title="Permalink to this headline">¶</a></h1>
-<p>If you want to write an application that interfaces with TREZOR your best bet is to use one of our prebuilt API toolkits:</p>
+<p>There are several ways a developer can connect to TREZOR. This is a brief overview of the approaches, from the more high-level to the more low-level; more detailed documentation is linked in each section.</p>
+<p>This is a graph displaying various TREZOR APIs, with some third-party applications colored in gray. <a class="reference external" href="_images/graph.png">See larger</a></p>
+<img alt="_images/graph.png" src="_images/graph.png" />
+<div class="section" id="trezor-connect">
+<h2>TREZOR Connect<a class="headerlink" href="#trezor-connect" title="Permalink to this headline">¶</a></h2>
+<p>TREZOR Connect is an easy way to add TREZOR functionality to your website. We made a very simple API with already omplemented GUI for most common use-cases:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/trezor/trezor.js">Javascript API</a></li>
-<li><a class="reference external" href="https://github.com/trezor/python-trezor">Python API</a></li>
-<li><a class="reference external" href="https://github.com/trezor/trezor-android">Android API</a></li>
+<li>Login with TREZOR</li>
+<li>Exporting xpub (public key)</li>
+<li>Signing of a pre-made transaction</li>
+<li>Payment request (creation of a transaction + signing it)</li>
 </ul>
-<p>For adding Login with TREZOR feature to your website or app, we have created specialized API with simplified implementation workflow:</p>
+<p><a class="reference external" href="https://github.com/trezor/connect">You can read a detailed information on our github page</a>, or more general information about the first use-case below:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api-connect.html">TREZOR Connect API</a><ul>
@@ -154,7 +165,43 @@
 </li>
 </ul>
 </div>
-<p>Don&#8217;t see your favorite language above?  Creating a new API toolkit is easy.  Please see:</p>
+</div>
+<div class="section" id="trezor-js">
+<h2>trezor.js<a class="headerlink" href="#trezor-js" title="Permalink to this headline">¶</a></h2>
+<p>trezor.js is a high-level framework that websites can use in order to communicate with TREZOR devices.</p>
+<p>You can use trezor.js in your web app and not communicate with lower transport layers directly; however, the <em>end user</em> has to install either trezord or TREZOR Chrome extension, see above.</p>
+<p>Unlike with TREZOR Connect, with trezor.js, you still need to implement the GUI and handle the various possible cases yourself.</p>
+<p><a class="reference external" href="https://github.com/trezor/trezor.js">See more documentation on the github page</a>.</p>
+</div>
+<div class="section" id="trezor-chrome-extension">
+<h2>TREZOR Chrome extension<a class="headerlink" href="#trezor-chrome-extension" title="Permalink to this headline">¶</a></h2>
+<p>TREZOR Chrome extension is an alternative way for web apps to talk with TREZOR. The extension communicates with TREZOR via USB directly, and then allows websites to communicate with the extension via Chrome messages.</p>
+<p>TREZOR Chrome extension is not intended for direct use by developers - it is still a little low-level, although more high-level than using USB HID directly. You should instead use trezor.js API, that uses the extension.</p>
+<p>However, the <em>end user</em> of the web app needs to install either trezord or Chrome Extension.</p>
+<p><a class="reference external" href="https://github.com/trezor/trezor-chrome-extension">See more documentation on the github page</a>.</p>
+</div>
+<div class="section" id="trezord-trezor-bridge">
+<h2>trezord (TREZOR Bridge)<a class="headerlink" href="#trezord-trezor-bridge" title="Permalink to this headline">¶</a></h2>
+<p>In order for websites, such as our own webwallet myTREZOR, to talk with TREZOR, we developed so-called &#8220;bridge&#8221;, or trezord (short for TREZOR daemon). trezord starts a local webserver, to which both external applications and local applications can communicate.</p>
+<p>trezord is not intended for direct use by developers - it is still a little low-level, although more high-level than using USB HID directly. You should instead use trezor.js API, that uses trezord.</p>
+<p>However, the <em>end user</em> of the web app needs to install either trezord or Chrome Extension.</p>
+<p><a class="reference external" href="https://github.com/trezor/trezord">See more documentation on the github page</a>.</p>
+</div>
+<div class="section" id="trezor-android">
+<h2>trezor-android<a class="headerlink" href="#trezor-android" title="Permalink to this headline">¶</a></h2>
+<p>You can use Android API in Java in order to use TREZOR in your Android app. Note that the mobile phone needs to support OTG connection and the user needs to have an OTG cable to connect TREZOR to the phone.</p>
+<p><a class="reference external" href="https://github.com/trezor/trezor-android">See more documentation on the github page</a>.</p>
+</div>
+<div class="section" id="python-trezor">
+<h2>python-trezor<a class="headerlink" href="#python-trezor" title="Permalink to this headline">¶</a></h2>
+<p>If you want to use TREZOR in your python script or in a desktop app that uses Python, you can use Python API.</p>
+<p><a class="reference external" href="https://github.com/trezor/python-trezor">See more documentation on the github page</a>.</p>
+</div>
+<div class="section" id="low-level-hid-api">
+<h2>Low-level HID API<a class="headerlink" href="#low-level-hid-api" title="Permalink to this headline">¶</a></h2>
+<p>Developers can directly &#8220;talk&#8221; to TREZOR using USB HID API and Protobufs.</p>
+<p>We recommend this approach only to developers that really know what they are doing (or want to write more high-level TREZOR libraries). Developers need to directly interact with messages to and from TREZOR and have to reimplement workflows, that are already present in the other APIs.</p>
+<p>For more info on low-level API, see:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api-protobuf.html">Low level API</a><ul>
@@ -164,6 +211,7 @@
 </ul>
 </li>
 </ul>
+</div>
 </div>
 </div>
 

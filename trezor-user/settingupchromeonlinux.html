@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Setting up Chrome extension on Linux &mdash; TREZOR User Manual 1.0 documentation</title>
+  <title>Setting up the Chrome extension on Linux &mdash; TREZOR User Manual 1.0 documentation</title>
   
 
   
@@ -75,7 +75,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="settingup.html">Setting up your TREZOR device</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Setting up Chrome extension on Linux</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Setting up the Chrome extension on Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fillingoutyourrecoverycard.html">Filling out your recovery card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="basic_settings.html">Basic Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enteringyourpin.html">Entering your PIN</a></li>
@@ -183,7 +183,7 @@
       
           <li><a href="settingup.html">Setting up your TREZOR device</a> &raquo;</li>
       
-    <li>Setting up Chrome extension on Linux</li>
+    <li>Setting up the Chrome extension on Linux</li>
       <li class="wy-breadcrumbs-aside">
         <ul class="share-buttons">
             <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://doc.satoshilabs.com/&t=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="_static/images/flat_web_icon_set/Facebook.png"></a></li>
@@ -200,21 +200,21 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="setting-up-chrome-extension-on-linux">
-<h1>Setting up Chrome extension on Linux<a class="headerlink" href="#setting-up-chrome-extension-on-linux" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://chrome.google.com/webstore/detail/jcjjhjgimijdkoamemaghajlhegmoclj">Chrome extension</a> is an convenient way of using TREZOR without a need of installing proprietary software on your computer.
+  <div class="section" id="setting-up-the-chrome-extension-on-linux">
+<h1>Setting up the Chrome extension on Linux<a class="headerlink" href="#setting-up-the-chrome-extension-on-linux" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference external" href="https://chrome.google.com/webstore/detail/jcjjhjgimijdkoamemaghajlhegmoclj">Chrome extension</a> is a convenient way of using TREZOR without installing proprietary software on your computer.
 However, on Linux, users need to perform additional configuration of their system.</p>
-<p>After you install Chrome extension in <a href="http://mytrezor.com" target="_blank">myTREZOR.com</a> on Linux, you will be asked to install additional package (DEB or RPM), which configures UDEV rules of your system.
+<p>After you install the Chrome extension in <a href="http://mytrezor.com" target="_blank">myTREZOR.com</a> on Linux, you will be asked to install additional package (DEB or RPM), which configures UDEV rules of your system.
 Those additional UDEV rules are necessary for communication between the device and Chrome browser.</p>
 <div class="section" id="manual-configuration-of-udev-rules">
 <h2>Manual configuration of UDEV rules<a class="headerlink" href="#manual-configuration-of-udev-rules" title="Permalink to this headline">¶</a></h2>
 <p>For rare Linux distributions without DEB or RPM package managers, please follow these steps for adding UDEV rules manually:</p>
 <ol class="arabic simple">
-<li>Disconect your TREZOR device.</li>
+<li>Disconnect your TREZOR device.</li>
 <li>Create new file <cite>/etc/udev/rules.d/51-trezor.rules</cite> in your favourite text editor (root privileges are necessary).</li>
 <li>Copy the following two lines, paste them into the file and save it.</li>
 </ol>
-<div class="highlight-python"><div class="highlight"><pre>SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;534c&quot;, ATTR{idProduct}==&quot;0001&quot;, MODE=&quot;0666&quot;, GROUP=&quot;dialout&quot;, SYMLINK+=&quot;trezor%n&quot;
+<div class="highlight-python"><div class="highlight"><pre><span></span>SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;534c&quot;, ATTR{idProduct}==&quot;0001&quot;, MODE=&quot;0666&quot;, GROUP=&quot;dialout&quot;, SYMLINK+=&quot;trezor%n&quot;
 KERNEL==&quot;hidraw*&quot;, ATTRS{idVendor}==&quot;534c&quot;, ATTRS{idProduct}==&quot;0001&quot;,  MODE=&quot;0666&quot;, GROUP=&quot;dialout&quot;
 </pre></div>
 </div>
