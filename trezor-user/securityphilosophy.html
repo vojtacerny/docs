@@ -85,7 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="receivingpayments.html#confirming-that-a-payment-has-been-received">Confirming that a payment has been received</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transfering money to your TREZOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transferring money to your TREZOR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makingpayments.html">Making payments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="makingpayments.html#outgoing-transactions">Outgoing transactions</a></li>
 </ul>
@@ -99,8 +99,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#during-normal-operation">During normal operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-an-update">After an update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#trezor-bridge-trezord">TREZOR Bridge (trezord)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-stops-responding">myTREZOR.com stops responding:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-shows-broken-or-confusing-account-information">myTREZOR.com shows broken or confusing account information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#firmware-update-went-wrong">Firmware update went wrong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#contact-support">Contact support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="emergency.html">Emergency situations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-multiple-trezor-devices">You have multiple TREZOR devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-available">You have one TREZOR device and recovery seed IS available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-not-available">You have one TREZOR device and recovery seed IS NOT available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-no-trezor-device-and-recovery-seed-is-available">You have no TREZOR device and recovery seed IS available</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="securitybestpractices.html">Security best practices</a><ul>
@@ -149,10 +159,22 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html#choose-from-trezor-homescreen-gallery">3. Choose from TREZOR Homescreen Gallery</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="passwordmanager.html">Password Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#set-up-trezor-password-manager">Set up TREZOR Password Manager:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#add-a-password-entry">Add a Password Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#manage-your-bookmarks-with-trezor-password-manager">Manage your bookmarks with TREZOR Password Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#trezor-password-manager-in-action">TREZOR Password Manager in Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#shortcuts">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#how-do-trezor-and-dropbox-work-together">How do TREZOR and Dropbox work together?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#planned-improvements">Planned Improvements</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-bridge">TREZOR Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-chrome-extension">TREZOR Chrome Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#trezor-password-manager-chrome-extension">TREZOR Password Manager (Chrome Extension)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#seed-recovery-card">Seed recovery card</a></li>
 </ul>
 </li>
@@ -222,7 +244,7 @@
 <div class="section" id="limiting-the-attack-surface-no-battery-wifi-bluetooth-fingerprint-reader-nfc">
 <h2>Limiting the attack surface: no battery, WiFi, Bluetooth, fingerprint reader, NFC<a class="headerlink" href="#limiting-the-attack-surface-no-battery-wifi-bluetooth-fingerprint-reader-nfc" title="Permalink to this headline">¶</a></h2>
 <p>Any time a computer has to deal with untrusted information there is a risk that the computer will be infected with malware.  The TREZOR is no exception.  In order to limit the attack surface against the TREZOR, TREZOR communicates solely through a simple USB protocol.  There is no WiFi or Bluetooth, no camera for scanning QR-codes.  There&#8217;s not even a fingerprint reader for identifying the user.  This is all because we want the TREZOR to be as secure as possible.  The fewer devices the TREZOR talks to, and the simpler its communication protocol is, the less likely it is to get infected.</p>
-<p>The TREZOR also has no battery.  When its unplugged its off and your bitcoins are safe from cyber attack.</p>
+<p>The TREZOR also has no battery.  When it&#8217;s unplugged it&#8217;s off and your bitcoins are safe from cyber attack.</p>
 </div>
 </div>
 

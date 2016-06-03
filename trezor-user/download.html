@@ -84,7 +84,7 @@
 <li class="toctree-l2"><a class="reference internal" href="receivingpayments.html#confirming-that-a-payment-has-been-received">Confirming that a payment has been received</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transfering money to your TREZOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transferring money to your TREZOR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makingpayments.html">Making payments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="makingpayments.html#outgoing-transactions">Outgoing transactions</a></li>
 </ul>
@@ -98,8 +98,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#during-normal-operation">During normal operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-an-update">After an update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#trezor-bridge-trezord">TREZOR Bridge (trezord)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-stops-responding">myTREZOR.com stops responding:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-shows-broken-or-confusing-account-information">myTREZOR.com shows broken or confusing account information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#firmware-update-went-wrong">Firmware update went wrong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#contact-support">Contact support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="emergency.html">Emergency situations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-multiple-trezor-devices">You have multiple TREZOR devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-available">You have one TREZOR device and recovery seed IS available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-not-available">You have one TREZOR device and recovery seed IS NOT available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-no-trezor-device-and-recovery-seed-is-available">You have no TREZOR device and recovery seed IS available</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="securitybestpractices.html">Security best practices</a><ul>
@@ -148,10 +158,22 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html#choose-from-trezor-homescreen-gallery">3. Choose from TREZOR Homescreen Gallery</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="passwordmanager.html">Password Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#set-up-trezor-password-manager">Set up TREZOR Password Manager:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#add-a-password-entry">Add a Password Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#manage-your-bookmarks-with-trezor-password-manager">Manage your bookmarks with TREZOR Password Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#trezor-password-manager-in-action">TREZOR Password Manager in Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#shortcuts">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#how-do-trezor-and-dropbox-work-together">How do TREZOR and Dropbox work together?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#planned-improvements">Planned Improvements</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#trezor-bridge">TREZOR Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#trezor-chrome-extension">TREZOR Chrome Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-password-manager-chrome-extension">TREZOR Password Manager (Chrome Extension)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#seed-recovery-card">Seed recovery card</a></li>
 </ul>
 </li>
@@ -201,12 +223,21 @@
 <div class="section" id="trezor-bridge">
 <h2>TREZOR Bridge<a class="headerlink" href="#trezor-bridge" title="Permalink to this headline">¶</a></h2>
 <p>TREZOR Bridge is an application which allows communication between TREZOR and any web browser.</p>
-<p>You can download the TREZOR Bridge <a class="reference external" href="https://mytrezor.s3.amazonaws.com/bridge/1.1.0/index.html">here</a> or check the GitHub repository <a class="reference external" href="https://github.com/trezor/trezord">here</a>.</p>
+<p>You can download the <a class="reference external" href="https://mytrezor.s3.amazonaws.com/bridge/1.1.0/index.html">TREZOR Bridge</a> directly or check the <a class="reference external" href="https://github.com/trezor/trezord">GitHub repository</a>.</p>
 </div>
 <div class="section" id="trezor-chrome-extension">
 <h2>TREZOR Chrome Extension<a class="headerlink" href="#trezor-chrome-extension" title="Permalink to this headline">¶</a></h2>
-<p>Chrome extension (available for download <a class="reference external" href="https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj">here</a>) is a convenient way of using TREZOR with <a class="reference external" href="http://www.google.com/chrome/">Google Chrome</a> browser without the need of installing proprietary software on your computer.</p>
-<p>For more detailed description of how it works and how to install it please visit following <a class="reference external" href="http://doc.satoshilabs.com/trezor-user/settingupchromeonlinux.html">article</a> in our user manual or <a class="reference external" href="https://github.com/trezor/trezor-chrome-extension">GitHub repository</a>.</p>
+<p><a class="reference external" href="https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj">TREZOR Chrome Extension</a> is a convenient way of using TREZOR with the <a class="reference external" href="http://www.google.com/chrome/">Google Chrome</a> browser without the need to install proprietary software on your computer.</p>
+<p>For a more detailed description of how it works and how to install it please visit the following <a class="reference external" href="http://doc.satoshilabs.com/trezor-user/settingupchromeonlinux.html">user manual post</a> or <a class="reference external" href="https://github.com/trezor/trezor-chrome-extension">GitHub repository</a>.</p>
+</div>
+<div class="section" id="trezor-password-manager-chrome-extension">
+<h2>TREZOR Password Manager (Chrome Extension)<a class="headerlink" href="#trezor-password-manager-chrome-extension" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This feature is currently in Beta version for public testing!</p>
+</div>
+<p><a class="reference external" href="https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk">TREZOR Password Manager</a> is ultimately secure way how to store your passwords. No more unlocking all the passwords at once by entering master password! Unlock and use only passwords you need. All the data are stored at Dropbox and encrypted with private keys generated from your TREZOR.</p>
+<p>You need a Dropbox account, Google Chrome or Chromium, <a class="reference external" href="https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj">TREZOR Chrome Extension</a>, <a class="reference external" href="https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk">TREZOR Password Manager Chrome Extension</a> and your TREZOR.</p>
 </div>
 <div class="section" id="seed-recovery-card">
 <h2>Seed recovery card<a class="headerlink" href="#seed-recovery-card" title="Permalink to this headline">¶</a></h2>

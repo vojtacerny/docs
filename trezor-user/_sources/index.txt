@@ -17,6 +17,7 @@ Contents
    updatingfirmware
    recovery
    troubleshooting
+   emergency
    securitybestpractices
    securityphilosophy
    advanced_settings
@@ -24,6 +25,7 @@ Contents
    messages
    labeling
    homescreen
+   passwordmanager
    applications
    download
 

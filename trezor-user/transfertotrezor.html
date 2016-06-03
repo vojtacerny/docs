@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Transfering money to your TREZOR &mdash; TREZOR User Manual 1.0 documentation</title>
+  <title>Transferring money to your TREZOR &mdash; TREZOR User Manual 1.0 documentation</title>
   
 
   
@@ -85,7 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="receivingpayments.html#confirming-that-a-payment-has-been-received">Confirming that a payment has been received</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Transfering money to your TREZOR</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Transferring money to your TREZOR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makingpayments.html">Making payments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="makingpayments.html#outgoing-transactions">Outgoing transactions</a></li>
 </ul>
@@ -99,8 +99,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#during-normal-operation">During normal operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-an-update">After an update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#trezor-bridge-trezord">TREZOR Bridge (trezord)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-stops-responding">myTREZOR.com stops responding:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-shows-broken-or-confusing-account-information">myTREZOR.com shows broken or confusing account information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#firmware-update-went-wrong">Firmware update went wrong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#contact-support">Contact support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="emergency.html">Emergency situations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-multiple-trezor-devices">You have multiple TREZOR devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-available">You have one TREZOR device and recovery seed IS available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-not-available">You have one TREZOR device and recovery seed IS NOT available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-no-trezor-device-and-recovery-seed-is-available">You have no TREZOR device and recovery seed IS available</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="securitybestpractices.html">Security best practices</a><ul>
@@ -149,10 +159,22 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html#choose-from-trezor-homescreen-gallery">3. Choose from TREZOR Homescreen Gallery</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="passwordmanager.html">Password Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#set-up-trezor-password-manager">Set up TREZOR Password Manager:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#add-a-password-entry">Add a Password Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#manage-your-bookmarks-with-trezor-password-manager">Manage your bookmarks with TREZOR Password Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#trezor-password-manager-in-action">TREZOR Password Manager in Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#shortcuts">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#how-do-trezor-and-dropbox-work-together">How do TREZOR and Dropbox work together?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#planned-improvements">Planned Improvements</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-bridge">TREZOR Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-chrome-extension">TREZOR Chrome Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#trezor-password-manager-chrome-extension">TREZOR Password Manager (Chrome Extension)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#seed-recovery-card">Seed recovery card</a></li>
 </ul>
 </li>
@@ -180,7 +202,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Transfering money to your TREZOR</li>
+    <li>Transferring money to your TREZOR</li>
       <li class="wy-breadcrumbs-aside">
         <ul class="share-buttons">
             <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://doc.satoshilabs.com/&t=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="_static/images/flat_web_icon_set/Facebook.png"></a></li>
@@ -197,8 +219,8 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="transfering-money-to-your-trezor">
-<h1>Transfering money to your TREZOR<a class="headerlink" href="#transfering-money-to-your-trezor" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="transferring-money-to-your-trezor">
+<h1>Transferring money to your TREZOR<a class="headerlink" href="#transferring-money-to-your-trezor" title="Permalink to this headline">¶</a></h1>
 <p>If you already have bitcoins in a wallet somewhere, you can send bitcoins to your TREZOR simply by sending them to one of the addresses listed on your Account page as described in <a class="reference internal" href="receivingpayments.html"><em>receiving payments</em></a>.</p>
 <p>If you don&#8217;t have any bitcoins yet you&#8217;ll either have to buy them, mine them, or sell something for them.  One good way to get bitcoins is to use a bitcoin ATM.  For this you&#8217;ll need the QR code for one of your bitcoin accounts.  You can print this QR code out and use it with the ATM to change cash into bitcoins.</p>
 <p>There are also many online bitcoin exchanges where you can change normal currency to bitcoins.  Most exchanges will also provide you with a service of holding your bitcoins for you in their own web wallet.  This is not safe at all and many people have lost their bitcoins by trusting them to such services.  If you buy bitcoins online, always make sure that you can send them to your TREZOR immediately after purchase!</p>

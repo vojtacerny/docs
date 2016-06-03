@@ -31,7 +31,7 @@
   
     <link rel="top" title="TREZOR User Manual 1.0 documentation" href="index.html"/>
         <link rel="next" title="Understanding transaction details" href="transactiondetails.html"/>
-        <link rel="prev" title="Transfering money to your TREZOR" href="transfertotrezor.html"/> 
+        <link rel="prev" title="Transferring money to your TREZOR" href="transfertotrezor.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -85,7 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="receivingpayments.html#confirming-that-a-payment-has-been-received">Confirming that a payment has been received</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transfering money to your TREZOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transferring money to your TREZOR</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Making payments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#outgoing-transactions">Outgoing transactions</a></li>
 </ul>
@@ -99,8 +99,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#during-normal-operation">During normal operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-an-update">After an update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#trezor-bridge-trezord">TREZOR Bridge (trezord)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-stops-responding">myTREZOR.com stops responding:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-shows-broken-or-confusing-account-information">myTREZOR.com shows broken or confusing account information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#firmware-update-went-wrong">Firmware update went wrong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#contact-support">Contact support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="emergency.html">Emergency situations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-multiple-trezor-devices">You have multiple TREZOR devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-available">You have one TREZOR device and recovery seed IS available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-not-available">You have one TREZOR device and recovery seed IS NOT available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-no-trezor-device-and-recovery-seed-is-available">You have no TREZOR device and recovery seed IS available</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="securitybestpractices.html">Security best practices</a><ul>
@@ -149,10 +159,22 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html#choose-from-trezor-homescreen-gallery">3. Choose from TREZOR Homescreen Gallery</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="passwordmanager.html">Password Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#set-up-trezor-password-manager">Set up TREZOR Password Manager:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#add-a-password-entry">Add a Password Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#manage-your-bookmarks-with-trezor-password-manager">Manage your bookmarks with TREZOR Password Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#trezor-password-manager-in-action">TREZOR Password Manager in Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#shortcuts">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#how-do-trezor-and-dropbox-work-together">How do TREZOR and Dropbox work together?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#planned-improvements">Planned Improvements</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-bridge">TREZOR Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-chrome-extension">TREZOR Chrome Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#trezor-password-manager-chrome-extension">TREZOR Password Manager (Chrome Extension)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#seed-recovery-card">Seed recovery card</a></li>
 </ul>
 </li>
@@ -202,7 +224,7 @@
 <p>In order to make payments, go to the account page in myTREZOR and press send.  You should see a payment page like this:</p>
 <img alt="_images/send.png" src="_images/send.png" />
 <p><strong>1. Enter the destination address</strong></p>
-<p>You can type in a destination address for your transaction and the value of coins which are about to be sent. Now you can choose to insert the amount in Bitcoins or any other world currency (actual exchange rate is provided by CoinDesk).</p>
+<p>You can type in a destination address for your transaction and the value of coins which are about to be sent. Now you can choose to insert the amount in bitcoins or any other world currency (actual exchange rate is provided by CoinDesk).</p>
 <p>If the address you want to send to is on someone&#8217;s cell phone, you might not want to type in the full address.   Chances are though, that they&#8217;ll also be able to show you the QR code for their account.  You can scan a QR code with myTREZOR simply by pressing the scan QR code button in the address field and holding a picture of the QR code up to your computer&#8217;s web cam.</p>
 <img alt="_images/send-scan-qrcode.png" src="_images/send-scan-qrcode.png" />
 <p>You can send bitcoins to multiple addresses with one transaction by pressing the &#8216;+&#8217; button in the right hand corner of the Send page. You can also choose to add multiple transactions by clicking on the &#8220;Import from CSV&#8221; button.</p>
@@ -211,7 +233,7 @@
 <p><strong>2. Enter your PIN</strong></p>
 <p>The first time you make a payment with your TREZOR after plugging your TREZOR in, you must enter your PIN.  This is because each time you plug in your TREZOR, your TREZOR starts in a locked state.  Once you have entered your PIN for the first time, your TREZOR will be unlocked until it is unplugged again.  If you need help entering your PIN, please see <a class="reference internal" href="enteringyourpin.html"><em>entering your pin</em></a>.</p>
 <p><strong>3. Confirm the transaction on your TREZOR</strong></p>
-<p>Once you have press send and entered your PIN, you will be asked to confirm your transaction.  Check the amount of the transaction and the destination address.  If the amount and address are correct, press the right button on your TREZOR to confirm.  If they are wrong, press &#8216;cancel&#8217;.  If they are wrong, it may mean that your computer has been infected with a virus and you can be happy that your bitcoins are safe in your TREZOR, and not already stolen.</p>
+<p>Once you have pressed send and entered your PIN, you will be asked to confirm your transaction.  Check the amount of the transaction and the destination address.  If the amount and address are correct, press the right button on your TREZOR to confirm.  If they are wrong, press &#8216;cancel&#8217;.  If they are wrong, it may mean that your computer has been infected with a virus and you can be happy that your bitcoins are safe in your TREZOR, and not already stolen.</p>
 <img alt="_images/trezor-tx1.jpg" src="_images/trezor-tx1.jpg" />
 <p>Once you have confirmed the destination address(es) and amount(s) of your bitcoin transaction, your TREZOR will display the total amount of the transaction along with the transaction fee.  Again, check to make sure these are reasonable before pressing confirm.</p>
 <img alt="_images/trezor-tx2.jpg" src="_images/trezor-tx2.jpg" />
@@ -234,7 +256,7 @@
         <a href="transactiondetails.html" class="btn btn-neutral float-right" title="Understanding transaction details">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="transfertotrezor.html" class="btn btn-neutral" title="Transfering money to your TREZOR"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="transfertotrezor.html" class="btn btn-neutral" title="Transferring money to your TREZOR"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

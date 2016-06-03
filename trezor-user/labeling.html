@@ -85,7 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="receivingpayments.html#confirming-that-a-payment-has-been-received">Confirming that a payment has been received</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transfering money to your TREZOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transferring money to your TREZOR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makingpayments.html">Making payments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="makingpayments.html#outgoing-transactions">Outgoing transactions</a></li>
 </ul>
@@ -99,8 +99,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#during-normal-operation">During normal operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-an-update">After an update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#trezor-bridge-trezord">TREZOR Bridge (trezord)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-stops-responding">myTREZOR.com stops responding:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-shows-broken-or-confusing-account-information">myTREZOR.com shows broken or confusing account information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#firmware-update-went-wrong">Firmware update went wrong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#contact-support">Contact support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="emergency.html">Emergency situations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-multiple-trezor-devices">You have multiple TREZOR devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-available">You have one TREZOR device and recovery seed IS available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-not-available">You have one TREZOR device and recovery seed IS NOT available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-no-trezor-device-and-recovery-seed-is-available">You have no TREZOR device and recovery seed IS available</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="securitybestpractices.html">Security best practices</a><ul>
@@ -149,10 +159,22 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html#choose-from-trezor-homescreen-gallery">3. Choose from TREZOR Homescreen Gallery</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="passwordmanager.html">Password Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#set-up-trezor-password-manager">Set up TREZOR Password Manager:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#add-a-password-entry">Add a Password Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#manage-your-bookmarks-with-trezor-password-manager">Manage your bookmarks with TREZOR Password Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#trezor-password-manager-in-action">TREZOR Password Manager in Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#shortcuts">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#how-do-trezor-and-dropbox-work-together">How do TREZOR and Dropbox work together?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#planned-improvements">Planned Improvements</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-bridge">TREZOR Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-chrome-extension">TREZOR Chrome Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#trezor-password-manager-chrome-extension">TREZOR Password Manager (Chrome Extension)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#seed-recovery-card">Seed recovery card</a></li>
 </ul>
 </li>
@@ -199,10 +221,6 @@
             
   <div class="section" id="labeling">
 <h1>Labeling<a class="headerlink" href="#labeling" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This feature is currently in open beta testing phase and is available at <a class="reference external" href="https://beta.mytrezor.com">beta.mytrezor.com</a>.</p>
-</div>
 <p>By connecting myTREZOR.com with Dropbox cloud storage, you can enjoy all these useful features:</p>
 <ul class="simple">
 <li><strong>Rename accounts</strong></li>
@@ -210,7 +228,7 @@
 <li><strong>Comment transactions</strong></li>
 </ul>
 <p>This is a great way to organize your bitcoin wallet and keep a memory of your transaction activity.
-Moreover, all your private data are ultimately secured and easily available from any computer. Every single information you add is automatically <strong>encrypted by a key derived from TREZOR device</strong> and uploaded to your personal Dropbox folder.</p>
+Moreover, all your private data are ultimately secured and easily available from any computer. All the information you add is automatically <strong>encrypted by a key derived from your TREZOR device</strong> and uploaded to your personal Dropbox folder.</p>
 <img alt="_images/labeling-example.png" src="_images/labeling-example.png" />
 <div class="section" id="set-up-labeling-connect-dropbox-with-your-trezor">
 <h2>Set up labeling: Connect Dropbox with your TREZOR<a class="headerlink" href="#set-up-labeling-connect-dropbox-with-your-trezor" title="Permalink to this headline">¶</a></h2>
@@ -219,7 +237,7 @@ Moreover, all your private data are ultimately secured and easily available from
 </ol>
 <img alt="_images/labeling-connecttodropbox.png" src="_images/labeling-connecttodropbox.png" />
 <ol class="arabic simple" start="2">
-<li>Click on the “Continue” button in a pop-up window that appears.</li>
+<li>Click on the <strong>Continue</strong> button in a pop-up window that appears.</li>
 </ol>
 <img alt="_images/labeling-connecttodropbox2.png" src="_images/labeling-connecttodropbox2.png" />
 <ol class="arabic simple" start="3">
@@ -235,7 +253,7 @@ Moreover, all your private data are ultimately secured and easily available from
 </ol>
 <img alt="_images/labeling-dropboxapproval.png" src="_images/labeling-dropboxapproval.png" />
 <ol class="arabic simple" start="5">
-<li>Finally, enable labeling on your TREZOR device. This will encrypt the files with your private key derived from TREZOR.</li>
+<li>Finally, enable labeling on your TREZOR device. This will encrypt the files with your private key derived from your TREZOR.</li>
 </ol>
 <img alt="_images/labeling-allowlabeling.png" src="_images/labeling-allowlabeling.png" />
 <p>Congratulations! You are ready to use TREZOR Labeling.</p>
@@ -257,13 +275,13 @@ Moreover, all your private data are ultimately secured and easily available from
 <p>Adding comments when sending transaction helps you keep track of your expenses.
 Let’s say you want to send money to two separate addresses (Alice and Bob) in one transaction. You can add a comment to every single address (output).</p>
 <img alt="_images/labeling-send.png" src="_images/labeling-send.png" />
-<p>When you switch back to “Transactions” tab, you will see one transaction with two commented addresses (outputs). You can change each of the comments separately.</p>
+<p>When you switch back to the “Transactions” tab, you will see one transaction with two commented addresses (outputs). You can change each of the comments separately.</p>
 <img alt="_images/labeling-transactions2.png" src="_images/labeling-transactions2.png" />
 </div>
 <div class="section" id="how-do-trezor-and-dropbox-work-together">
 <h2>How do TREZOR and Dropbox work together?<a class="headerlink" href="#how-do-trezor-and-dropbox-work-together" title="Permalink to this headline">¶</a></h2>
-<p>If you are interested how it works in the background, it&#8217;s actually quite simple! MyTREZOR will create a folder “/apps/trezor/” in your Dropbox and store labels for every TREZOR account in separated file. You can back up those files and use them to restore all the labels in case you lost access to your Dropbox account!</p>
-<p>Files and encrypted by AES-256 function using the TREZOR private key derived for this single purpose. It&#8217;s also not possible to use Dropbox to reveal your payment history, your actual account balance or to rebuild your recovery seed!</p>
+<p>If you are interested how it works in the background, it&#8217;s actually quite simple! MyTREZOR will create a folder “/apps/trezor/” in your Dropbox and store labels for each TREZOR account in a separate file. You can back up those files and use them to restore all the labels in case you lose access to your Dropbox account!</p>
+<p>Files are encrypted with AES-256 using a private key derived from your TREZOR for this single purpose. It&#8217;s also not possible to use Dropbox to reveal your payment history, your actual account balance or to rebuild your recovery seed!</p>
 </div>
 </div>
 

@@ -30,7 +30,7 @@
 
   
     <link rel="top" title="TREZOR User Manual 1.0 documentation" href="index.html"/>
-        <link rel="next" title="Security best practices" href="securitybestpractices.html"/>
+        <link rel="next" title="Emergency situations" href="emergency.html"/>
         <link rel="prev" title="Recovery" href="recovery.html"/> 
 
   
@@ -85,7 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="receivingpayments.html#confirming-that-a-payment-has-been-received">Confirming that a payment has been received</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transfering money to your TREZOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transferring money to your TREZOR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makingpayments.html">Making payments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="makingpayments.html#outgoing-transactions">Outgoing transactions</a></li>
 </ul>
@@ -99,8 +99,18 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#during-normal-operation">During normal operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#after-an-update">After an update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-bridge-trezord">TREZOR Bridge (trezord)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mytrezor-com-stops-responding">myTREZOR.com stops responding:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mytrezor-com-shows-broken-or-confusing-account-information">myTREZOR.com shows broken or confusing account information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#firmware-update-went-wrong">Firmware update went wrong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contact-support">Contact support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="emergency.html">Emergency situations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-multiple-trezor-devices">You have multiple TREZOR devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-available">You have one TREZOR device and recovery seed IS available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-not-available">You have one TREZOR device and recovery seed IS NOT available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-no-trezor-device-and-recovery-seed-is-available">You have no TREZOR device and recovery seed IS available</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="securitybestpractices.html">Security best practices</a><ul>
@@ -149,10 +159,22 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html#choose-from-trezor-homescreen-gallery">3. Choose from TREZOR Homescreen Gallery</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="passwordmanager.html">Password Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#set-up-trezor-password-manager">Set up TREZOR Password Manager:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#add-a-password-entry">Add a Password Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#manage-your-bookmarks-with-trezor-password-manager">Manage your bookmarks with TREZOR Password Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#trezor-password-manager-in-action">TREZOR Password Manager in Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#shortcuts">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#how-do-trezor-and-dropbox-work-together">How do TREZOR and Dropbox work together?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#planned-improvements">Planned Improvements</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-bridge">TREZOR Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-chrome-extension">TREZOR Chrome Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#trezor-password-manager-chrome-extension">TREZOR Password Manager (Chrome Extension)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#seed-recovery-card">Seed recovery card</a></li>
 </ul>
 </li>
@@ -199,30 +221,40 @@
             
   <div class="section" id="troubleshooting">
 <h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="during-normal-operation">
-<h2>During normal operation<a class="headerlink" href="#during-normal-operation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="if-mytrezor-com-stops-responding">
-<h3>If myTREZOR.com stops responding:<a class="headerlink" href="#if-mytrezor-com-stops-responding" title="Permalink to this headline">¶</a></h3>
+<p>Here you can find most common issues and how to solve them.</p>
+<div class="section" id="trezor-bridge-trezord">
+<h2>TREZOR Bridge (trezord)<a class="headerlink" href="#trezor-bridge-trezord" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bridge-reinstall-problem-windows">
+<h3>Bridge reinstall problem (Windows)<a class="headerlink" href="#bridge-reinstall-problem-windows" title="Permalink to this headline">¶</a></h3>
+<p>If you see following</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>Output folder: C:\Program Files (x86)\TREZOR Bridge
+Can&#39;t write: C:\Program Files (x86)\TREZOR Bridge\libcrypto-10.dll
+</pre></div>
+</div>
+<p>Please uninstall the previous version of TREZOR Bridge first and delete all remaining files, then install the new version.</p>
+</div>
+</div>
+<div class="section" id="mytrezor-com-stops-responding">
+<h2>myTREZOR.com stops responding:<a class="headerlink" href="#mytrezor-com-stops-responding" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Unplug your TREZOR</li>
-<li>Refresh myTREZOR.com</li>
+<li>Refresh <a class="reference external" href="https://www.mytrezor.com">myTREZOR.com</a> or try <a class="reference external" href="https://beta.mytrezor.com">beta.myTREZOR.com</a></li>
 <li>Plug your TREZOR back in</li>
 </ol>
 <p>You can unplug your TREZOR at any time except during the update procedure.  There is no risk of data loss.</p>
 </div>
-<div class="section" id="if-mytrezor-com-shows-broken-or-confusing-account-information">
-<h3>If myTREZOR.com shows broken or confusing account information<a class="headerlink" href="#if-mytrezor-com-shows-broken-or-confusing-account-information" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="mytrezor-com-shows-broken-or-confusing-account-information">
+<h2>myTREZOR.com shows broken or confusing account information<a class="headerlink" href="#mytrezor-com-shows-broken-or-confusing-account-information" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Run <a class="reference internal" href="forgetting.html"><em>Forget device</em></a></li>
 <li>Unplug your TREZOR</li>
 <li>Plug your TREZOR back in</li>
 </ol>
 </div>
-</div>
-<div class="section" id="after-an-update">
-<h2>After an update<a class="headerlink" href="#after-an-update" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="if-you-see">
-<h3>If you see:<a class="headerlink" href="#if-you-see" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="firmware-update-went-wrong">
+<h2>Firmware update went wrong<a class="headerlink" href="#firmware-update-went-wrong" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="unofficial-firmware">
+<h3>Unofficial firmware<a class="headerlink" href="#unofficial-firmware" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>WARNING!
 
 Unofficial firmware
@@ -233,19 +265,23 @@ Unofficial firmware
 <li>Done. Your TREZOR should now work again.</li>
 </ol>
 </div>
-<div class="section" id="id1">
-<h3>If you see:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span></span>Firmware seems broken.
+<div class="section" id="broken-firmware">
+<h3>Broken firmware<a class="headerlink" href="#broken-firmware" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span>Firmware appears to be broken.
 
-Please try to reflash the device.
+Unplug your TREZOR and see our support page at mytrezor.com.
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><a class="reference internal" href="updatingfirmware.html"><em>Run the update again</em></a>.</li>
 <li>Done.  Your TREZOR should now work again.</li>
+<li>If it still doesn&#8217;t work please try different USB cable and proceed to step 1.</li>
 </ol>
-<p>If you see firmware related errors any other time, and you have not uploaded unofficial firmware to your TREZOR device, contact TREZOR support.</p>
 </div>
+</div>
+<div class="section" id="contact-support">
+<h2>Contact support<a class="headerlink" href="#contact-support" title="Permalink to this headline">¶</a></h2>
+<p>If you encountered any other problem or suggested solutions didn&#8217;t solve your issue, please contact our <a class="reference external" href="mailto:support&#37;&#52;&#48;bitcointrezor&#46;com">Customer Support</a>.</p>
 </div>
 </div>
 
@@ -255,7 +291,7 @@ Please try to reflash the device.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="securitybestpractices.html" class="btn btn-neutral float-right" title="Security best practices">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="emergency.html" class="btn btn-neutral float-right" title="Emergency situations">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="recovery.html" class="btn btn-neutral" title="Recovery"><span class="fa fa-arrow-circle-left"></span> Previous</a>

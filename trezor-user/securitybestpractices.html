@@ -31,7 +31,7 @@
   
     <link rel="top" title="TREZOR User Manual 1.0 documentation" href="index.html"/>
         <link rel="next" title="Security philosophy" href="securityphilosophy.html"/>
-        <link rel="prev" title="Troubleshooting" href="troubleshooting.html"/> 
+        <link rel="prev" title="Emergency situations" href="emergency.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -85,7 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="receivingpayments.html#confirming-that-a-payment-has-been-received">Confirming that a payment has been received</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transfering money to your TREZOR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfertotrezor.html">Transferring money to your TREZOR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makingpayments.html">Making payments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="makingpayments.html#outgoing-transactions">Outgoing transactions</a></li>
 </ul>
@@ -99,8 +99,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#during-normal-operation">During normal operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#after-an-update">After an update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#trezor-bridge-trezord">TREZOR Bridge (trezord)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-stops-responding">myTREZOR.com stops responding:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mytrezor-com-shows-broken-or-confusing-account-information">myTREZOR.com shows broken or confusing account information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#firmware-update-went-wrong">Firmware update went wrong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#contact-support">Contact support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="emergency.html">Emergency situations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-multiple-trezor-devices">You have multiple TREZOR devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-available">You have one TREZOR device and recovery seed IS available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-one-trezor-device-and-recovery-seed-is-not-available">You have one TREZOR device and recovery seed IS NOT available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html#you-have-no-trezor-device-and-recovery-seed-is-available">You have no TREZOR device and recovery seed IS available</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Security best practices</a><ul>
@@ -149,10 +159,22 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html#choose-from-trezor-homescreen-gallery">3. Choose from TREZOR Homescreen Gallery</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="passwordmanager.html">Password Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#set-up-trezor-password-manager">Set up TREZOR Password Manager:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#add-a-password-entry">Add a Password Entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#manage-your-bookmarks-with-trezor-password-manager">Manage your bookmarks with TREZOR Password Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#trezor-password-manager-in-action">TREZOR Password Manager in Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#shortcuts">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#how-do-trezor-and-dropbox-work-together">How do TREZOR and Dropbox work together?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#planned-improvements">Planned Improvements</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-bridge">TREZOR Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-chrome-extension">TREZOR Chrome Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#trezor-password-manager-chrome-extension">TREZOR Password Manager (Chrome Extension)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#seed-recovery-card">Seed recovery card</a></li>
 </ul>
 </li>
@@ -201,11 +223,11 @@
 <h1>Security best practices<a class="headerlink" href="#security-best-practices" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="choose-a-good-pin">
 <h2>Choose a good PIN<a class="headerlink" href="#choose-a-good-pin" title="Permalink to this headline">¶</a></h2>
-<p>TREZOR&#8217;s PIN based security system is a powerful tool to keep your bitcoin&#8217;s safe.  If your TREZOR is stolen, the only thing between the thief and your bitcoins is your PIN and/or passphrase.  <strong>It is imperative that you choose a good PIN!</strong></p>
-<p>An <a class="reference external" href="http://www.datagenetics.com/blog/september32012/">analysis in 2012</a> showed that 11% of PINs used were 1234.  Do not use the PIN 1234 to secure your TREZOR.  Do not use any pin which contains a series of repeated numbers or a counting sequence.</p>
+<p>TREZOR&#8217;s PIN based security system is a powerful tool to keep your bitcoins safe.  If your TREZOR is stolen, the only thing between the thief and your bitcoins is your PIN and/or passphrase.  <strong>It is imperative that you choose a good PIN!</strong></p>
+<p>An <a class="reference external" href="http://www.datagenetics.com/blog/september32012/">analysis in 2012</a> showed that 11% of PINs used were 1234.  Do not use the PIN 1234 to secure your TREZOR.  Do not use any PIN which contains a series of repeated numbers or a counting sequence.</p>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
-<p class="last">The numbers displayed on the TREZOR&#8217;s screen when it requests a new PIN are in random order.  You can use them as the basis for your PIN, if you don&#8217;t have any better ideas.  For example, you can use the first two rows when you are shown the matrix for the first time.</p>
+<p class="last">The numbers displayed on the TREZOR&#8217;s screen when it requests a new PIN are in a random order.  You can use them as the basis for your PIN, if you don&#8217;t have any better ideas.  For example, you can use the first two rows when you are shown the matrix for the first time.</p>
 </div>
 <p>If you have trouble remembering your PIN, write it on your recovery card.</p>
 </div>
@@ -215,7 +237,7 @@
 <li>Theft</li>
 </ul>
 <blockquote>
-<div><p>If you do not use a passphrase, your recovery seed is all that is needed to access your bitcoins.  The physical security of your recovery seed is much more important than the physical security of your TREZOR.  If your TREZOR is stolen, the likely hood is that the thieves will be unable to crack your PIN and that your bitcoins are safe.  However, if your recovery seed is stolen your bitcoins can be accessed quite easily.</p>
+<div><p>If you do not use a passphrase, your recovery seed is all that is needed to access your bitcoins.  The physical security of your recovery seed is much more important than the physical security of your TREZOR.  If your TREZOR is stolen, the likelihood is that the thieves will be unable to crack your PIN and that your bitcoins are safe.  However, if your recovery seed is stolen your bitcoins can be accessed quite easily.</p>
 <p>Only ever keep your recovery seed on paper.  Never store it on your computer.</p>
 </div></blockquote>
 <ul class="simple">
@@ -258,7 +280,7 @@
         <a href="securityphilosophy.html" class="btn btn-neutral float-right" title="Security philosophy">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="troubleshooting.html" class="btn btn-neutral" title="Troubleshooting"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="emergency.html" class="btn btn-neutral" title="Emergency situations"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
