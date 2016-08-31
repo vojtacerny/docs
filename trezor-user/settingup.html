@@ -74,10 +74,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Setting up your TREZOR device</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="settingupchromeonlinux.html">Setting up the Chrome extension on Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fillingoutyourrecoverycard.html">Filling out your recovery card</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basic_settings.html">Basic Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enteringyourpin.html">Entering your PIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#online-at-mytrezor-com">1. Online at mytrezor.com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-chrome-extension">2. TREZOR Chrome extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-manager-for-android">3. TREZOR Manager for Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#offline-with-python-tools">4. Offline with Python tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-setup">TREZOR Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="receivingpayments.html">Receiving payments</a><ul>
@@ -170,6 +171,12 @@
 <li class="toctree-l2"><a class="reference internal" href="passwordmanager.html#planned-improvements">Planned Improvements</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="u2f.html">Two-factor Authentication with U2F</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="u2f.html#how-to-setup-trezor-as-a-u2f-key">How to Setup TREZOR as a U2F key?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u2f.html#using-trezor-as-a-u2f-key">Using TREZOR as a U2F Key</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sshlogin.html">SSH Login</a></li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#trezor-bridge">TREZOR Bridge</a></li>
@@ -221,12 +228,33 @@
             
   <div class="section" id="setting-up-your-trezor-device">
 <h1>Setting up your TREZOR device<a class="headerlink" href="#setting-up-your-trezor-device" title="Permalink to this headline">¶</a></h1>
-<p>The TREZOR works with almost any computer that has a USB port and an internet connection.  To allow the <a href="http://mytrezor.com" target="_blank">myTREZOR.com</a> wallet to communicate with the TREZOR you need to install a piece of software called the TREZOR bridge.  If you go to the <a href="http://mytrezor.com" target="_blank">myTREZOR.com</a> website you should see a page with a Download link.  Download the TREZOR bridge and follow the instructions on the screen.</p>
+<p>The TREZOR works with almost any computer that has a USB port or with Android devices with USB Host support.</p>
+<p>There are four options to initialize the TREZOR device.</p>
+<div class="section" id="online-at-mytrezor-com">
+<h2>1. Online at mytrezor.com<a class="headerlink" href="#online-at-mytrezor-com" title="Permalink to this headline">¶</a></h2>
+<p>To allow the <a href="http://mytrezor.com" target="_blank">myTREZOR.com</a> wallet to communicate with the TREZOR you need to install a piece of software called the TREZOR Bridge.  If you go to the <a href="http://mytrezor.com" target="_blank">myTREZOR.com</a> website you should see a page with a Download link.  Download the TREZOR bridge and follow the instructions on the screen.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">We also provide a <a class="reference external" href="https://chrome.google.com/webstore/detail/jcjjhjgimijdkoamemaghajlhegmoclj">Chrome extension</a>, which works on all platforms. However, Linux users need to perform additional configuration of their system, please see <a class="reference internal" href="settingupchromeonlinux.html"><em>Setting up Chrome extension on Linux</em></a>.</p>
 </div>
-<p>Once you&#8217;ve got the TREZOR bridge installed go to <a href="http://mytrezor.com" target="_blank">myTREZOR.com</a> again.  This time you should see a web page welcoming you and asking for a device label:</p>
+<p>Once you&#8217;ve got the TREZOR Bridge or TREZOR Chrome extension installed go to <a href="http://mytrezor.com" target="_blank">myTREZOR.com</a> again.</p>
+</div>
+<div class="section" id="trezor-chrome-extension">
+<h2>2. TREZOR Chrome extension<a class="headerlink" href="#trezor-chrome-extension" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://chrome.google.com/webstore/detail/jcjjhjgimijdkoamemaghajlhegmoclj">TREZOR Chrome extension</a> can be used cross platforms, however only with Chrome based browsers. Please note that Linux users need to perform additional configuration of their system, please see <a class="reference internal" href="settingupchromeonlinux.html"><em>Setting up Chrome extension on Linux</em></a>. After you successfully install the extension please open the <a class="reference external" href="chrome://apps/">Apps tab</a> and double click on the TREZOR Extension.</p>
+</div>
+<div class="section" id="trezor-manager-for-android">
+<h2>3. TREZOR Manager for Android<a class="headerlink" href="#trezor-manager-for-android" title="Permalink to this headline">¶</a></h2>
+<p>You can also set up TREZOR with our <a class="reference external" href="https://play.google.com/store/apps/details?id=io.trezor.app">TREZOR Manager</a>, which can be found in Google Play store. Your phone has to support the USB Host (USB On The Go - OTG) and you need to use the OTG cable (you can buy one as a TREZOR accessory directly at <a class="reference external" href="https://www.buytrezor.com/">BuyTREZOR.com eshop</a>.</p>
+</div>
+<div class="section" id="offline-with-python-tools">
+<h2>4. Offline with Python tools<a class="headerlink" href="#offline-with-python-tools" title="Permalink to this headline">¶</a></h2>
+<p>This procedure is only for advanced users! We do not recommend to use it unless you have some experience with command line and Python. If you wish to proceed further anyway please visit our <a class="reference external" href="https://github.com/trezor/python-trezor">Github repository</a>.</p>
+</div>
+<div class="section" id="trezor-setup">
+<h2>TREZOR Setup<a class="headerlink" href="#trezor-setup" title="Permalink to this headline">¶</a></h2>
+<p>The process of actual device setup is pretty much the same when using mytrezor.com, Chrome extension or TREZOR Manager for Android. Let&#8217;s go through it when setting up at mytrezor.com..</p>
+<p>This time you should see a web page welcoming you and asking for a device label:</p>
 <img alt="_images/welcometosetup.png" src="_images/welcometosetup.png" />
 <p>Enter a new name for your TREZOR device and press Continue.  You should see the first seed word.  Now go on to <a class="reference internal" href="fillingoutyourrecoverycard.html"><em>Filling out your Recovery Card</em></a>.</p>
 <div class="admonition note">
@@ -252,6 +280,7 @@
 </ul>
 </li>
 </ul>
+</div>
 </div>
 </div>
 
