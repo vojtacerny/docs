@@ -176,18 +176,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sshlogin.html">SSH Login</a></li>
-<li class="toctree-l1"><a class="reference internal" href="android.html">Using TREZOR with Android</a></li>
-<li class="toctree-l1"><a class="reference internal" href="android.html#trezor-setup-with-trezor-manager">TREZOR setup with TREZOR Manager</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="android.html#first-look">First Look</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android.html#initialize-your-trezor">Initialize Your TREZOR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android.html#entering-pin">Entering PIN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android.html#seed-recovery">Seed Recovery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android.html#wipe-and-update-firmware">Wipe and update firmware</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="android.html#trezor-mycelium">TREZOR + Mycelium</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="android.html#import-as-account">Import as Account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android.html#use-as-cold-storage">Use as Cold Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android.html">Using TREZOR with Android</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="android.html#trezor-setup-with-trezor-manager">TREZOR setup with TREZOR Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#trezor-mycelium">TREZOR + Mycelium</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">TREZOR Apps</a></li>
@@ -195,6 +186,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#trezor-bridge">TREZOR Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#trezor-chrome-extension">TREZOR Chrome Extension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#trezor-password-manager-chrome-extension">TREZOR Password Manager (Chrome Extension)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trezor-manager-android-app">TREZOR Manager (Android App)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#seed-recovery-card">Seed recovery card</a></li>
 </ul>
 </li>
@@ -259,6 +251,15 @@
 </div>
 <p><a class="reference external" href="https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk">TREZOR Password Manager</a> is ultimately secure way how to store your passwords. No more unlocking all the passwords at once by entering master password! Unlock and use only passwords you need. All the data are stored at Dropbox and encrypted with private keys generated from your TREZOR.</p>
 <p>You need a Dropbox account, Google Chrome or Chromium, <a class="reference external" href="https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj">TREZOR Chrome Extension</a>, <a class="reference external" href="https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk">TREZOR Password Manager Chrome Extension</a> and your TREZOR.</p>
+</div>
+<div class="section" id="trezor-manager-android-app">
+<h2>TREZOR Manager (Android App)<a class="headerlink" href="#trezor-manager-android-app" title="Permalink to this headline">¶</a></h2>
+<p>TREZOR is becoming truly portable! With the release of our new TREZOR Manager application for Android, we are introducing an alternative method how to set up, customize and recover your TREZOR device even without a computer.</p>
+<p>It should work on all phones that support USB Host. You will need an OTG cable to connect the TREZOR to your phone or tablet. The app was tested on LG Nexus 5 (Android 6) and Samsung Galaxy Alpha (Android 5).</p>
+<p>Currently, the app can be only used for initializing the device, recovering the device, setting up the PIN code and passphrase, and some other settings.</p>
+<p>In order to pay with TREZOR via your phone, you will have to install another application. The TREZOR Manager will direct you to Mycelium, as our application of choice.</p>
+<p>You can download the TREZOR Manager app from <a class="reference external" href="https://play.google.com/store/apps/details?id=io.trezor.app">Google Play Store</a>, as a <a class="reference external" href="https://github.com/trezor/webwallet-data/raw/master/android/trezor-app-1.0.1.apk">binary APK</a> or see the <a class="reference external" href="https://github.com/trezor/trezor-android">source code at Github</a>.</p>
+<p>For further instructions how to use the App please check our <a class="reference internal" href="android.html"><em>User Manual page</em></a>.</p>
 </div>
 <div class="section" id="seed-recovery-card">
 <h2>Seed recovery card<a class="headerlink" href="#seed-recovery-card" title="Permalink to this headline">¶</a></h2>
