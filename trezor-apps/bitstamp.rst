@@ -1,7 +1,7 @@
 Bitstamp
 ===================
 
-.. image:: images/bitwala_logo.png
+.. image:: images/72.png
 
 What is Bitstamp?
 -------------------------
