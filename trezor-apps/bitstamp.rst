@@ -21,14 +21,14 @@ TREZOR User Manual
 Deposit funds with TREZOR
 ^^^^^^^^^^^^^^^
 
-With Bitwala, users gain a convenient new way to transfer bitcoins directly from their Trezor wallet to a bank account of their choice.
-Pay with TREZOR feature will be appreciated by all users who would like to pay bills with bitcoins or cash out in a simple manner:
+With Bitstamp, users gain a convenient new way to transfer bitcoins directly from their Trezor wallet to an account.
+This feature is great for everyone who loves TREZOR security.
 
 1) Log into Bitstamp account.
-2) Create a bill, email pay or PayPal payment.
-3) Click on the "Pay with Trezor" button.
+2) Go to Deposit -> Bitcoin -> HD Wallet -> Trezor.
+3) Select desired amount and click on "Deposit".
 4) Connect your TREZOR and follow the instructions.
-5) Authenticate to your TREZOR with PIN.
+5) Authenticate to your TREZOR with PIN/Passphrase.
 6) Choose the account you want to send the bitcoins from.
 7) Check and confirm the transaction on the Trezor screen. Done.
 
@@ -37,16 +37,13 @@ Pay with TREZOR feature will be appreciated by all users who would like to pay b
 Withdrawal funds with TREZOR
 ^^^^^^^^^^^^^^^
 
-With Bitwala, users gain a convenient new way to transfer bitcoins directly from their Trezor wallet to a bank account of their choice.
-Pay with TREZOR feature will be appreciated by all users who would like to pay bills with bitcoins or cash out in a simple manner:
-
 1) Log into Bitstamp account.
-2) Create a bill, email pay or PayPal payment.
-3) Click on the "Pay with Trezor" button.
-4) Connect your TREZOR and follow the instructions.
-5) Authenticate to your TREZOR with PIN.
-6) Choose the account you want to send the bitcoins from.
-7) Check and confirm the transaction on the Trezor screen. Done.
+2) Go to Withdrawal -> Bitcoin -> HD Wallet -> Trezor.
+3) Connect your TREZOR and follow the instructions.
+4) Authenticate to your TREZOR with PIN/Passphrase.
+5) Choose the account you want to send the bitcoins to.
+6) Select desired amount and click on "Withdrawal".
+7) Confirm the withdrawal transaction via received e-mail. Done.
 
 .. image:: images/bitwala01.gif
 
