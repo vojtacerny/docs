@@ -58,13 +58,13 @@ e.g. creating invoices from your TREZOR accounts. Click on the name of a service
 ==================================================== ===================================== ==============================================================================================
 Service                                              Feature(s)                            Description
 `Bitex <bitex.html>`_                                :icon:`lock`                          Real time bitcoin exchange.
+`Bitstamp <bitstamp.html>`_                          :icon:`exchange`                      Real time bitcoin exchange.
 `Bitwala <bitwala.html>`_                            :icon:`exchange`                      Payment processor. Pay your Euro bills with Bitcoin.
 `Cashila <cashila.html>`_                            :icon:`lock` :icon:`exchange`         Payment processor. Pay your Euro bills with Bitcoin.
 `Coinmap <coinmap.html>`_                            :icon:`lock` :icon:`umbrella`         Map of bitcoin shops and businesses.
 `Coinpayments <coinpayments.html>`_                  :icon:`lock`                          Payment processor service supporting various cryptocurrencies.
 `Osclass <osclass.html>`_                            :icon:`lock`                          Open-source platform for easy creation of classifieds sites. 
 `Strip4Bit <strip4bit.html>`_                        :icon:`lock` :icon:`umbrella`         Adult site allowing users to sign up privately in a secure way. 
-`Telebit <telebit.html>`_                            :icon:`exchange`                      Android wallet coupled to Telegram Messenger
 `Wordpress <wordpress.html>`_                        :icon:`lock`                          Blog hosting and publishing platform.
 ==================================================== ===================================== ==============================================================================================
 
