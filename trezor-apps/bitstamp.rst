@@ -32,7 +32,9 @@ This feature is great for everyone who loves TREZOR security.
 6) Choose the account you want to send the bitcoins from.
 7) Check and confirm the transaction on the Trezor screen. Done.
 
+
 .. image:: images/bitstamp.gif
+
 
 Withdrawal funds with TREZOR
 ^^^^^^^^^^^^^^^
