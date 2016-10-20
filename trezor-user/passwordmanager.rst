@@ -20,7 +20,7 @@ If you are using TREZOR already, chances are you have the TCE installed already.
 Please add the `TREZOR Password Manager <https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk>`_ Chrome/Chromium extension into your browser. Then click on the TREZOR icon in the top right corner of your browser.
 
 
-**3. Connect your Dropbox account with TREZOR**
+**3a. Connect your Dropbox account with TREZOR**
 
 3.1. Click on the Sign in with Dropbox button and log into your Dropbox account. If you don't have any, create one, it’s free.
 
@@ -29,6 +29,13 @@ Please add the `TREZOR Password Manager <https://chrome.google.com/webstore/deta
 3.2. Give your TREZOR permission to create a folder in your Dropbox to store all the passwords in and confirm using the Dropbox account.
 
 .. images:: images/tpm_dropbox.gif
+**3b. Connect your Google Drive account with TREZOR**
+
+3.1. Click on the Sign in with drive button and log into your Google Drive account. If you don't have any, create one, it’s free.
+
+.. important:: When you log into your Dropbox account, there is a session cookie on Dropbox server with access to myTREZOR folder valid for about 5 years! We recommend to log out of your Dropbox account manually after you finish working with myTREZOR.com or use Private window in your browser for the best possible privacy.
+
+3.2. Give your TREZOR permission to create a folder in your Dropbox to store all the passwords in and confirm using the Dropbox account.
 
 **4. Connect Your TREZOR device and enter your PIN. Learn how to enter PIN with TREZOR :doc:`enteringyourpin`**
 
