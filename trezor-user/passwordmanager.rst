@@ -29,6 +29,7 @@ Please add the `TREZOR Password Manager <https://chrome.google.com/webstore/deta
 3.2. Give your TREZOR permission to create a folder in your Dropbox to store all the passwords in and confirm using the Dropbox account.
 
 .. images:: images/tpm_dropbox.gif
+
 **3b. Connect your Google Drive account with TREZOR**
 
 3.1. Click on the Sign in with drive button and log into your Google Drive account. If you don't have any, create one, it’s free.
