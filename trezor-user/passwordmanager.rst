@@ -39,7 +39,6 @@ Please add the `TREZOR Password Manager <https://chrome.google.com/webstore/deta
 
 **5. Finally, enable Password Manager on your TREZOR device. This action will start encryption of your password files with your TREZOR.**
 
-.. image:: images/pm-connectdeviceapproval.png
 
 Congratulations! You are ready to use TREZOR Password Manager.
 
